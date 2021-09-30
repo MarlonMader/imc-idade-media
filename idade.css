@@ -22,27 +22,27 @@ body {
   min-height: 89.4vh;
 }
 
-.linha{
-    height: 50px;
-    width: 100%;
-    background: #000;
-    box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
+.linha {
+  height: 50px;
+  width: 100%;
+  background: #000;
+  box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
 }
 
-h1{
-    text-align: center;
-    color: #fff;
+h1 {
+  text-align: center;
+  color: #fff;
 }
 
-.calc-imc {
+.container {
   padding: 1em;
   box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
   background-color: #ffffff;
   border-radius: 20px;
 }
 
-@media (min-width: 300px) {
-  .calc-imc {
+@media (min-width: 300px) { /*@media você pode combinar várias funcionalidades, operadores, criar condições especificas e obter efeitos variados conforme a necessidade*/
+  .container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,154 +53,88 @@ h1{
   }
 }
 
-.calc-imc h1 {
+.container h1 {
   text-align: center;
   font-size: 2em;
   text-decoration: underline;
 }
 
-.form {
+label {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0.3em;
+
 }
 
-.form label,
-.form button {
-  margin-top: 1em;
+.peso {
+  border-radius: 20px;
 }
 
-.form input,
-.form button {
-  font-size: inherit;
-  font-family: inherit;
-  width: 100%;
-  padding: 0.5em;
-}
-
-.form button {
-  background-color: #FBEFFF;
-  cursor: pointer;
-  border-radius: 0.3em;
-  width: 50%;
-}
-
-.form button:hover {
-  filter: opacity(0.8);
-}
-
-.form button:active {
-  background-color: #FFEFFF;
-  color: #000;
-  filter: opacity(0.8);
-}
-
-
-.message {
-  display: block;
-  width: 100%;
+.abaixo {
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 1.2rem;
-  font-style: italic;
-  position: fixed;
-  box-shadow: 0 0 4px #333;
+  width: 100%;
+  background: #000;
+  box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
 }
 
-@media screen and (max-width: 500px) {
-  .message {
-    bottom: 0;
-  }
-}
-
-.sucess {
-  background-color: #2ecc71;
-  color: #fff;
-}
-
-.warning {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.alert {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.danger {
-  background-color: #c0392b;
-  color: #fff;
-}
-label{
-    display: flex;
-
-}
-.peso{
-    border-radius: 20px;
-}
 button {
-    position: relative;
-    height: 40px;
-    width: 100px;
-    margin: 0 35px;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    background: #111;
-    color: #fff;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
 
 }
-button:first-child{
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b,#03a9f4);
-    background-size: 400%;
+
+button:first-child {
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
 }
-button:last-child{
-    background: linear-gradient(90deg, #f47199, #f5ce62, #e43603,#f47199);
-    background-size: 400%;
+
+button:last-child {
+  background: linear-gradient(90deg, #f47199, #f5ce62, #e43603, #f47199);
+  background-size: 400%;
 }
+
 button:first-child::before,
-button:last-child::before{
-    content: '';
-    position: absolute;
-    background: inherit;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    border-radius: 50px;
-    filter: blur(20px);
-    opacity: 0;
-    transition: opacity 0.5s;
+button:last-child::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
 }
+
 button:first-child:hover::before,
-button:last-child:hover:before{
-    opacity: 1;
-    z-index: -1;
-   
+button:last-child:hover:before {
+  opacity: 1;
+  z-index: -1;
+
 }
-button:hover{
-    z-index: 1;
-    animation: glow 8s linear infinite;
+
+button:hover { /*apenas para saber quando o mouse esta por cima do button*/
+  z-index: 1;
+  animation: glow 8s linear infinite;
 }
-@keyframes glow{
-    0%{
-        background-position: 0%;
-    }
-    100%{
-        background-position: 400%;
-    }
-}
-.abaixo{
-    height: 50px;
-    width: 100%;
-    background: #000;
-    box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
+
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
 }

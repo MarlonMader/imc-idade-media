@@ -13,7 +13,7 @@
     <div class="linha">
         <h1>Calculadora de MEDIA</h1>
         <div class="main">
-            <section class="calc-imc">
+            <section class="container">
                 <div id="campo">
                     <label>Nome do aluno:</label>
                     <input type="text" id="nome" placeholder="Informe o nome">
@@ -33,27 +33,7 @@
         </div>
         <footer class="abaixo"></footer>
     </div>
-
-
-        <script>
-            function media() {
-                let nome = document.querySelector("#nome");
-                let nota1 = document.querySelector("#nota1");
-                let nota2 = document.querySelector("#nota2");
-                let nota3 = document.querySelector("#nota3");
-                let nota4 = document.querySelector("#nota4");
-                let campo = document.querySelector("#campo");
-
-                let media = (nota1 + nota2 + nota3 + nota4) / 4;
-                if (media >= 7) {
-                    campo.innerHTML += `<p>${nome1.value}, sua média é: ${media} você está aprovado!!</p>`
-                } else if (media >= 4.5) {
-                    campo.innerHTML += `<p>${nome1.value}, sua média é: ${media} você está em exame!!</p>`
-                } else if (media < 4.5) {
-                    campo.innerHTML += `<p>${nome1.value}, sua média é: ${media} você está reprovado!!</p>`
-                }
-            }
-        </script>
+    <script src="./media.js"></script>
 </body>
 
 </html>
